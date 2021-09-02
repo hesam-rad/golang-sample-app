@@ -8,7 +8,7 @@ pipeline {
             steps {
                 sh '''
                 docker build . -t nexus.hesam.cf:5000/go-app-full:v1
-                echo $PASS_DOCKER | docker login nexus.hesam.cf:5000  -u$DOCKER_USER --password-stdin
+                echo $PASS_DOCKER | docker login nexus.hesam.cf:5000  -u$USER_DOCKER --password-stdin
                 docker push nexus.hesam.cf:5000/go-app-full:v1
                 '''
             }
