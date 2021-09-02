@@ -9,8 +9,6 @@ pipeline {
                 sh "docker images"
             }
         }
-    }
-    stages {
         stage("Test") {
             steps {
                 sh "touch /tmp/jenkinstest.test"
