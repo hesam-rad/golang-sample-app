@@ -6,12 +6,15 @@ pipeline {
     stages {
         stage("Build") {
             steps {
-                sh "docker images"
+                sh '''
+                docker build . -t nexus.hesam.cf:5000/go-app-full:v1
+                docker push nexus.hesam.cf:5000/go-app-full:v1
+                '''
             }
         }
         stage("Test") {
             steps {
-               sh "cat /tmp/jenkinstest.test"
+               sh "docker images"
            }
         }
     }
