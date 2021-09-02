@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage("Build") {
             steps {
-                echo "build test"
+                sh "touch /tmp/jenkinstest.test"
+                sh "echo "Stage test > /tmp/jenkinstest.test"
             }
         }
     }
