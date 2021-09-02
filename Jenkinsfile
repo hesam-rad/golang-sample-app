@@ -9,11 +9,10 @@ pipeline {
                 sh "docker images"
             }
         }
-//        stage("Test") {
-//            steps {
-//               sh "touch /tmp/jenkinstest.test"
-//              sh "echo test2 > /tmp/jenkinstest.test"
-//           }
-//        }
+        stage("Test") {
+            steps {
+               sh "cat /tmp/jenkinstest.test"
+           }
+        }
     }
 }
