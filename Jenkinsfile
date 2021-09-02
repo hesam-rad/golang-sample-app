@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage("Build") {
             steps {
-                touch ~/test
+                echo "build test"
             }
         }
     }
